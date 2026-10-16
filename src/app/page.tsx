@@ -17,7 +17,7 @@ const HERO_VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4";
 
 const stats = [
-  { icon: IconCalendar, value: 4, prefix: "", label: "anos construindo no RN" },
+  { icon: IconCalendar, value: 4, prefix: "", label: "anos de mercado" },
   { icon: IconBuilding, value: 100, prefix: "+", label: "obras entregues" },
   { icon: IconPin, value: 30, prefix: "+", label: "municípios atendidos" },
   { icon: IconHelmet, value: 1, prefix: "", label: "engenheiro do início ao fim" },
@@ -142,7 +142,7 @@ export default function Home() {
               </h1>
 
               <p className="hero-sub anim" style={{ "--d": "0.32s" } as React.CSSProperties}>
-                Construímos e reformamos prédios públicos, escolas, quadras e casas em Natal e no interior do RN. Você
+                Construímos e reformamos prédios públicos, escolas, quadras e casas em Natal, no interior do RN e na Paraíba. Você
                 sabe quanto vai gastar antes da primeira parede subir, e acompanha tudo direto com o engenheiro.
               </p>
 
@@ -302,7 +302,7 @@ export default function Home() {
               </h2>
               <FillText
                 className="about-text"
-                text="A V Torres é de Natal, com escritório no Alecrim, e trabalha com uma ideia simples: obra boa é obra que termina no prazo e no valor combinado. Atendemos prefeituras, empresas e famílias em todo o RN, sempre com engenheiro acompanhando de perto e prestação de contas clara em cada etapa."
+                text="A V Torres é de Natal, com escritório no Alecrim, e trabalha com uma ideia simples: obra boa é obra que termina no prazo e no valor combinado. Atendemos prefeituras, empresas e famílias no Rio Grande do Norte e na Paraíba, sempre com engenheiro acompanhando de perto e prestação de contas clara em cada etapa."
               />
               <ol className="timeline" data-progress="view">
                 <span className="timeline-line" aria-hidden="true" />
@@ -391,7 +391,7 @@ export default function Home() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Image src={logo} alt="Logo da V Torres Construtora e Engenharia" width={72} height={63} />
-            <p>V Torres Construtora e Engenharia. Construção e reforma em Natal e interior do RN.</p>
+            <p>V Torres Construtora e Engenharia. Construção e reforma em Natal, no RN e na Paraíba.</p>
           </div>
           <nav className="footer-nav" aria-label="Rodapé">
             <a href="#obras">Obras</a>

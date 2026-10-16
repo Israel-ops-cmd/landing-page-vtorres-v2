@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "construtora em Natal",
     "construtora Natal RN",
     "obras públicas RN",
+    "construtora Paraíba",
     "reforma em Natal",
     "V Torres Construtora",
   ],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     title: "V Torres Construtora e Engenharia | Natal - RN",
-    description: "Sua obra pronta no prazo, sem surpresa no orçamento. Construção e reforma em Natal e no interior do RN.",
+    description: "Sua obra pronta no prazo, sem surpresa no orçamento. Construção e reforma em Natal, no RN e na Paraíba.",
     siteName: "V Torres Construtora",
   },
 };
