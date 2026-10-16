@@ -633,6 +633,8 @@ img {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  /* espaço para a barra de progresso e para a próxima seção, que sobe 40px */
+  padding-bottom: 88px;
 }
 .works-track {
   display: flex;
@@ -673,27 +675,33 @@ img {
 .work-card:hover .work-media img {
   transform: scale(1.05);
 }
+/* Altura das fotos acompanha a altura da tela, deixando espaço para a legenda */
+.works {
+  --media-h: clamp(200px, calc(100svh - var(--header-h) - 290px), 540px);
+}
 .work-1 .work-media {
-  width: min(720px, 56vw);
-  height: min(62vh, 520px);
+  height: var(--media-h);
+  width: min(720px, 56vw, calc(var(--media-h) * 1.5));
 }
 .work-2 .work-media {
-  width: min(380px, 30vw);
-  height: min(56vh, 500px);
+  height: calc(var(--media-h) * 0.9);
+  width: calc(var(--media-h) * 0.9 * 0.75);
 }
 .work-3 .work-media {
-  width: min(420px, 32vw);
-  height: min(64vh, 560px);
+  height: var(--media-h);
+  width: calc(var(--media-h) * 0.76);
 }
 .work-4 .work-media {
-  width: min(360px, 28vw);
-  height: min(50vh, 460px);
+  height: calc(var(--media-h) * 0.84);
+  width: calc(var(--media-h) * 0.84 * 0.76);
 }
 .work-card figcaption {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-width: 360px;
+  width: 100%;
+  max-width: 380px;
+  min-width: 240px;
   padding-top: 16px;
 }
 .work-card strong {
@@ -714,7 +722,7 @@ img {
   position: absolute;
   left: var(--gutter);
   right: var(--gutter);
-  bottom: clamp(20px, 4vh, 40px);
+  bottom: 60px;
   height: 3px;
   border-radius: 3px;
   background: var(--line-dark);
@@ -1206,6 +1214,11 @@ img {
   transform: none;
   pointer-events: auto;
   animation: ring 2.8s ease-out 1s infinite;
+}
+.js body.past-hero.cta-visible .wa-float {
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
 }
 .wa-float:hover {
   transform: translateY(-2px);

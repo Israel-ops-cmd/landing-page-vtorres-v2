@@ -37,6 +37,19 @@ export function Header() {
     );
     sections.forEach((s) => io.observe(s));
 
+    // Esconde o botão fixo de WhatsApp quando a chamada final ou o rodapé,
+    // que já têm o próprio botão, estão na tela.
+    const ctaZones = document.querySelectorAll(".final-copy, .footer");
+    const visibleZones = new Set<Element>();
+    const ctaIo = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) visibleZones.add(e.target);
+        else visibleZones.delete(e.target);
+      }
+      document.body.classList.toggle("cta-visible", visibleZones.size > 0);
+    });
+    ctaZones.forEach((z) => ctaIo.observe(z));
+
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     const onResize = () => window.innerWidth > 900 && setOpen(false);
     window.addEventListener("keydown", onKey);
@@ -46,6 +59,7 @@ export function Header() {
       window.removeEventListener("keydown", onKey);
       window.removeEventListener("resize", onResize);
       io.disconnect();
+      ctaIo.disconnect();
     };
   }, []);
 

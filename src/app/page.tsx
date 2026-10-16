@@ -8,6 +8,7 @@ import { Motion } from "@/components/Motion";
 import { Strips } from "@/components/Strips";
 import logo from "@/assets/logo.webp";
 import calcamento from "@/assets/obras/calcamento-brejinho.webp";
+import equipe from "@/assets/obras/equipe-canteiro.webp";
 import portico from "@/assets/obras/portico-brejinho.webp";
 import prefeitura from "@/assets/obras/prefeitura-curral-de-cima.webp";
 import quadra from "@/assets/obras/quadra-colegio-over.webp";
@@ -289,8 +290,8 @@ export default function Home() {
           <div className="container about-layout">
             <div className="about-media">
               <Strips
-                image={quadra}
-                alt="Quadra poliesportiva coberta do Colégio Over, obra da V Torres"
+                image={equipe}
+                alt="Equipe da V Torres de uniforme e capacete cortando madeira no canteiro de obra"
                 count={4}
                 sizes="(max-width: 900px) 100vw, 45vw"
                 className="about-strips"
